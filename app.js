@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('https://api.quotable.io/random')
   .then(response => response.json())
   .then(data => {
-    console.log(data.content)
     var prompt = data.content;
     const promptContainer = document.getElementById('prompt-div');
 
@@ -24,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
         input.setAttribute('data-idx', currentIdx)
       }
     });
+
+    var newGameBtn = document.getElementById('new-game');
+    newGameBtn.addEventListener('click', () => window.location.reload())
 
     var startBtn = document.getElementById('start-btn');
     startBtn.addEventListener('click', (e) => {
