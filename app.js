@@ -59,7 +59,7 @@ function updateGame(input, inputElement, letterElements, currentIdx, keyboardIdx
   } else if (input === null) {
     return [currentIdx, wordstart, keyboardIdx];
   } else if (input === " " && input === correct && currentIdx === keyboardIdx) {
-    inputElement.value = " "
+    inputElement.value = "";
     letterElements[currentIdx].style.color = 'red';
     return [currentIdx + 1, true, keyboardIdx + 1];
   } else if (input === correct && currentIdx === keyboardIdx) {
