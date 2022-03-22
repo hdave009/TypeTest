@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Type Racer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="prompt row" id="prompt-div"></div>
+      <input
+        type="text"
+        id="typer"
+        class="type-area"
+        placeholder="Type prompt"
+        disabled
+        data-idx="0"
+      />
+      <h4 id="time"></h4>
+      <button id="start-btn">Start</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
