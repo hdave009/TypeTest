@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
   .then(data => {
     var prompt = data.content;
     const promptContainer = document.getElementById('prompt-div');
+    const authorContainer = document.getElementById('author');
 
     var wordCount = prompt.split(' ').length;
     var letterElements = plugQuoteIntoDOM(promptContainer, prompt);
+
+    authorContainer.innerHTML = `By: ${data.author}`;
+
     var input = document.getElementById('typer');
     var currentIdx = 0;
     var keyboardIdx = 0;
